@@ -36,9 +36,9 @@
 
 .draggable-element {
   @apply flex text-opacity-100 items-center 
-  rounded-md cursor-pointer border w-full h-full
+  rounded-md cursor-pointer border w-full 
   outline-stone-800 hover:border-2 focus:border-[3px]
-  text-lg bg-slate-700 text-white relative min-h-10 mb-2;
+  text-lg bg-slate-700 text-white relative h-10 mb-2;
 }
 
 .task-delete-button {

@@ -14,12 +14,12 @@
     </div>
     <div class="boards-container">
       <div class="board" v-for="(elem, idx) in boardArr" :key="idx">
-        <div class="w-[85%] flex">
+        <div class="w-[85%] flex h-full">
           <div class="h-full w-full">
             <div class="board-title">
               <h1>{{ elem["title"] }}</h1>
             </div>
-            <draggable class="" :list="elem['arr']" group="tasks">
+            <draggable class="h-full" :list="elem['arr']" group="tasks">
               <div
                 class="draggable-element"
                 v-for="element in elem['arr']"
