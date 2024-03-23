@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for trello challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "ee",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.0",
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
+  }
+}
