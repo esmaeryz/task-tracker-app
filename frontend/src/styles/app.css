@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.main {
+  @apply flex flex-col gap-8 p-4;
+}
+
+.boards-container {
+  @apply grid grid-flow-col justify-center 
+  align-middle  min-w-80 min-h-[700px] pt-32;
+}
+
+.board {
+  @apply flex ml-1 mr-1 flex-col w-80 h-full bg-slate-400 rounded-md;
+}
+
+.custom-form {
+  @apply w-32 h-16 px-[40%] pt-16;
+}
+
+.form-button {
+  @apply bg-slate-400 text-black hover:text-white 
+  hover:bg-slate-800 font-bold rounded w-16 h-12;
+}
+
+.input-container {
+  @apply w-32 grid grid-flow-col gap-8;
+}
+
+.form-input {
+  @apply w-64 hover:border px-2 hover:border-black hover:border-opacity-100 border 
+  border-black border-opacity-50 rounded text-zinc-800;
+}
+
+.draggable-element {
+  @apply flex text-opacity-100 w-full text-center justify-center 
+  rounded-md my-2 cursor-pointer gap-4 border 
+  outline-stone-800 hover:border-2 focus:border-[3px]
+  py-2 text-lg bg-slate-700 text-white;
+}
+
+.task-delete-button {
+  @apply ml-8 w-16 hover:bg-slate-400 hover:text-black hover:h-full rounded-md;
+}
+
+.board-title {
+  @apply w-full text-center py-4 border-b-[1px] border-b-slate-950 mb-4 text-2xl;
+}
