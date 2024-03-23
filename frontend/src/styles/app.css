@@ -3,20 +3,11 @@
 @import "tailwindcss/utilities";
 
 .main {
-  @apply flex flex-col gap-8 p-4;
-}
-
-.boards-container {
-  @apply grid grid-flow-col justify-center 
-  align-middle  min-w-80 min-h-[700px] pt-32;
-}
-
-.board {
-  @apply flex ml-1 mr-1 flex-col w-80 h-full bg-slate-400 rounded-md;
+  @apply flex flex-col gap-8 p-4 w-screen h-screen justify-center items-center;
 }
 
 .custom-form {
-  @apply w-32 h-16 px-[40%] pt-16;
+  @apply flex w-96 pt-16;
 }
 
 .form-button {
@@ -33,17 +24,27 @@
   border-black border-opacity-50 rounded text-zinc-800;
 }
 
+.boards-container {
+  @apply grid grid-cols-4 justify-center align-middle items-center 
+  w-11/12 h-2/3 gap-x-2 px-2 
+  mt-16 overflow-hidden;
+}
+
+.board {
+  @apply flex flex-col w-full h-full bg-slate-400 rounded-md items-center;
+}
+
 .draggable-element {
-  @apply flex text-opacity-100 w-full text-center justify-center 
-  rounded-md my-2 cursor-pointer gap-4 border 
+  @apply flex text-opacity-100 items-center 
+  rounded-md cursor-pointer border w-full h-full
   outline-stone-800 hover:border-2 focus:border-[3px]
-  py-2 text-lg bg-slate-700 text-white;
+  text-lg bg-slate-700 text-white relative min-h-10;
 }
 
 .task-delete-button {
-  @apply ml-8 w-16 hover:bg-slate-400 hover:text-black hover:h-full rounded-md;
+  @apply hover:bg-slate-400 hover:text-black hover:h-full rounded-md absolute right-5 max-h-7 text-xs lg:text-base;
 }
 
 .board-title {
-  @apply w-full text-center py-4 border-b-[1px] border-b-slate-950 mb-4 text-2xl;
+  @apply w-full text-center border-b-[1px] border-b-slate-950 mb-4 text-2xl;
 }

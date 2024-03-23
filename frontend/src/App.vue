@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="custom-form pl-6">
+    <div class="custom-form">
       <div class="input-container">
         <input
           class="form-input"
@@ -13,19 +13,21 @@
       </div>
     </div>
     <div class="boards-container">
-      <div class="" v-for="(elem, idx) in boardArr" :key="idx">
-        <div class="board">
+      <div class="board" v-for="(elem, idx) in boardArr" :key="idx">
+        <div class="w-[85%] flex">
           <div class="h-full w-full">
             <div class="board-title">
               <h1>{{ elem["title"] }}</h1>
             </div>
-            <draggable class="h-full px-12" :list="elem['arr']" group="tasks">
+            <draggable class="" :list="elem['arr']" group="tasks">
               <div
                 class="draggable-element"
                 v-for="element in elem['arr']"
                 :key="element.name"
               >
-                <div class="h-full">
+                <div
+                  class="h-full text-xs lg:text-base flex items-center absolute left-5"
+                >
                   <p>{{ element.name }}</p>
                 </div>
                 <button
